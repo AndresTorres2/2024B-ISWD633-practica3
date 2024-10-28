@@ -11,24 +11,40 @@ docker run -d --name <nombre contenedor> -v <ruta carpeta host>:<ruta carpeta co
 ![Volúmenes](img/volumen-host.PNG)
 # COMPLETAR CON EL COMANDO
 
+docker run -d -P --name host-nginx -v .\nginx\html\:/usr/share/nginx/html nginx:alpine
+
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 
+Sale error 403 Forbidden.
+
 ### ¿Qué pasa con el archivo index.html del contenedor?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+
+
+Como antes no tenia un index.html sale ese error, pero con el index.html ya no salta ese error, y se muestra la pag
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 
+El servidor nginx detecta el nuevo cambio en ña carpeta host, por lo que al ingresar nuevamente al servidor se puede observar el template que se descargo
+
 ### Eliminar el contenedor
 # COMPLETAR CON EL COMANDO
+
+docker rm host-nginx
 
 ### ¿Qué sucede al crear nuevamente el mismo contenedor con volumen de tipo host a los directorios definidos anteriormente?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 
+Al crear el mismo contenedor con los directorios definidos anteriormente, y abrimos el servidor nginx veremos el template que se descargo. 
+
 ### ¿Qué hace el comando pwd?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+
+
+El comando pwd muestra en qué carpeta o ubicación se esta  trabajando actualmente en la línea de comandos.
+
 Si quieres incluir el comando pwd dentro de un comando de Docker, lo puedes hacer de diferentes maneras dependiendo del shell que estés utilizando.
 
 
